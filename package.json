@@ -1,0 +1,24 @@
+{
+  "name": "modal-window-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisterRabbit/modal-window-example.git"
+  },
+  "keywords": [],
+  "author": "Tikhon Umnov (umnov.site)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MisterRabbit/modal-window-example/issues"
+  },
+  "homepage": "https://github.com/MisterRabbit/modal-window-example#readme",
+  "devDependencies": {
+    "webpack": "^5.12.2",
+    "webpack-cli": "^4.3.1"
+  }
+}
