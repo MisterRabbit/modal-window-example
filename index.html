@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Модальное окно</title>
-  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/css/bundle.css">
 </head>
 <body>
   <div class="wrapper">
     <h1 class="title">Модальное окно на JavaScript</h1>
     <hr>
     <div class="modal">
-      <div class="modal__overlay"></div>
-      <div class="modal__window">
-
+      <div class="modal__overlay">
+        <div class="modal__window">
+          <div class="modal__header">
+            <h5 class="modal__title">Модальное окно</h5>
+            <button class="btn modal__close">&times;</button>
+          </div>
+          <div class="modal__body"></div>
+          <div class="modal__footer"></div>
+        </div>
       </div>
     </div>
   </div>
