@@ -1,9 +1,27 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: $base-text-primary;
+  -webkit-font-smoothing: antialiased;
+}
+
 .wrapper {
-  // background:green;
+  display: flex;
+  background-color: $base-accent;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
-
-
-
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0 0 1em 0;
 }
