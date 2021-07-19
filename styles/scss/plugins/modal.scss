@@ -3,7 +3,7 @@
   &.open {
     display: block;
   }
-  &_overlay {
+  &__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,24 +14,29 @@
     align-items: center;
     background: rgba(0, 0, 0, .5);
   }
-  &_window {
+  &__window {
     margin: 1em;
     flex-direction: column;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 1em;
     background: #fff;
   }
-  &_header {
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: $modal-padding;
+    border-radius: 1em 1em 0 0;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid $base-accent;
   }
-  &_title {
+  &__title {
+    text-transform: uppercase;
     font-size: 1em;
+    font-weight: 600;
     margin: 0;
   }
-  &_close {
+  &__close {
     border: 1px solid $base-text-secondary;
     color: $base-text-primary;
     border-radius: 50%;
@@ -42,10 +47,13 @@
       border: 1px solid $base-accent;
     }
   }
-  &_body {
+  &__body {
     padding: 0 $modal-padding;
+    p {
+      line-height: normal;
+    }
   }
-  &_footer {
+  &__footer {
     display: flex;
     justify-content: flex-end;
     padding: $modal-padding;

@@ -8,7 +8,7 @@
   transition: all .15s;
   letter-spacing: 0.02em;
   background: transparent;
-  &_group {
+  &__group {
     .btn {
       margin-right: 0.5em;
       &:last-child {
@@ -16,7 +16,7 @@
       }
     }
   }
-  &_transparent {
+  &__transparent {
     color: #ffffff;
     &__light {
       &:hover {
@@ -34,7 +34,7 @@
       }
     }
   }
-  &_accent {
+  &__accent {
     background: $base-accent;
     border: 1px solid $base-accent;
     color: #ffffff;

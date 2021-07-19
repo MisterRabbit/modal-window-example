@@ -1,17 +1,29 @@
 import { App } from './base.js';
-
 import './plugins/modal.js';
 
 const modal = App.modal({
-  title: 'Заголовок модального окна',
+  title: 'Modal window title',
   closable: true,
   content: `
-    <p>Описание содержимого окна</p>
-    <ul>
-      <li>Элемент списка 1</li>
-      <li>Элемент списка 2</li>
-    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   `,
   width: '400px',
 });
 
+document.addEventListener('click', e => {
+  e.preventDefault();
+  const isOpenModalButton = e.target.dataset.modalOpen
+  if (isOpenModalButton) {
+    modal.open();
+  }
+})
+
+// https://codepen.io/ig_design/pen/BajVZre
+
+// https://freefrontend.com/
+
+// https://codepen.io/knyttneve/pen/dgoWyE
+
+
+// console.log(App.modal);
+// modal.open();

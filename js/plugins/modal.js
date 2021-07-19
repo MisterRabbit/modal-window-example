@@ -4,19 +4,19 @@ const createModal = (options) => {
   const modal = document.createElement('div');
   modal.classList.add('modal');
   modal.insertAdjacentHTML('afterbegin', `
-    <div class="modal_overlay" data-modal-close="true">
-      <div class="modal_window" style="max-width: ${options.width || '600px'}">
-        <div class="modal_header">
-          <h5 class="modal_title">${options.title || ''}</h5>
-          ${options.closable ? `<button class="btn modal_close" data-modal-close="true"></button>` : ''}
+    <div class="modal__overlay" data-modal-close="true">
+      <div class="modal__window" style="max-width: ${options.width || '600px'}">
+        <div class="modal__header">
+          <h5 class="modal__title">${options.title || ''}</h5>
+          ${options.closable ? `<button class="btn modal__close" data-modal-close="true"></button>` : ''}
         </div>
-        <div class="modal_body" data-content>
+        <div class="modal__body" data-content>
           ${options.content || ''}
         </div>
-        <div class="modal_footer">
-          <div class="btn_group">
-            <button class="btn btn_transparent btn_transparent__dark" data-modal-close="true">Отменить</button>
-            <button class="btn btn_accent">Принять</button>
+        <div class="modal__footer">
+          <div class="btn__group">
+            <button class="btn btn__transparent btn__transparent__dark" data-modal-close="true">Close</button>
+            <button class="btn btn__accent">Accept</button>
           </div>
         </div>
       </div>
@@ -52,8 +52,6 @@ export default App.modal = function (options) {
   const listener = e => {
     if (e.target.dataset.modalClose) {
       modalWindow.close();
-    } else if (e.target.dataset.modalOpen) {
-      modalWindow.open();
     }
   }
 
