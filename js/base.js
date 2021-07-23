@@ -1,11 +1,1 @@
-export const App = {
-  // loging: () => {
-  //   console.log(App);
-  // }
-
-
-// test
-
-
-
-}
+export const App = {}

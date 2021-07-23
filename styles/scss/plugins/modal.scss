@@ -3,16 +3,42 @@
   &.open {
     display: block;
   }
+  &.show & {
+    &__overlay {
+      opacity: 1;
+      transition: .35s opacity ease-out;
+    }
+    &__window {
+      opacity: 1;
+      transform: scale(1);
+      transition: .35s .35s opacity ease-out, .35s .35s transform ease;
+    }
+  }
+  &.hide & {
+    &__overlay {
+      opacity: 0;
+      transition: .35s .35s opacity ease-out;
+    }
+    &__window {
+      opacity: 0;
+      transform: scale(0.6);
+      transition: .35s opacity ease-out, .35s transform ease;
+    }
+  }
+
   &__overlay {
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
+    opacity: 0;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, .5);
+    transition: .35s 0s opacity ease-out;
+
   }
   &__window {
     margin: 1em;
@@ -20,6 +46,8 @@
     width: 100%;
     border-radius: 1em;
     background: #fff;
+    opacity: 0;
+    transform: scale(0.6);
   }
   &__header {
     display: flex;

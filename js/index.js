@@ -12,18 +12,8 @@ const modal = App.modal({
 
 document.addEventListener('click', e => {
   e.preventDefault();
-  const isOpenModalButton = e.target.dataset.modalOpen
+  const isOpenModalButton = e.target.dataset.modalOpen;
   if (isOpenModalButton) {
     modal.open();
   }
-})
-
-// https://codepen.io/ig_design/pen/BajVZre
-
-// https://freefrontend.com/
-
-// https://codepen.io/knyttneve/pen/dgoWyE
-
-
-// console.log(App.modal);
-// modal.open();
+});

@@ -26,8 +26,8 @@ const createModal = (options) => {
   return modal;
 }
 
-export default App.modal = function (options) {
-  const ANIMATION_SPEED = 200;
+export default App.modal = options => {
+  const ANIMATION_SPEED = 350;
   const modal = createModal(options);
   let destroyed = false;
 
@@ -35,19 +35,23 @@ export default App.modal = function (options) {
     open() {
       if (!destroyed) {
         modal.classList.add('open');
+        setTimeout(() => {
+          modal.classList.add('show');
+        }, 0);
       }
-      // isModalOpen = true;
+      isModalOpen = true;
     },
     close() {
-      modal.classList.remove('open');
+      modal.classList.remove('show');
       modal.classList.add('hide');
       setTimeout(() => {
         modal.classList.remove('hide');
-        // isModalOpen = false;
-      }, ANIMATION_SPEED);
+        modal.classList.remove('open');
+        isModalOpen = false;
+      }, ANIMATION_SPEED * 2);
     },
   }
-  // let isModalOpen = false:
+  let isModalOpen = false;
 
   const listener = e => {
     if (e.target.dataset.modalClose) {
